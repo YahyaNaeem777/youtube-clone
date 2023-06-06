@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&display=swap');
+
+$text-color:#b1bdb4;
+$black-primary:#16181b;
+$black-secondary:#121418;
+$border-color:#4c4c4c;
+
+$breakpoint-medium: 1224px;
+$breakpoint-small: 520px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: $black-primary !important;
+    background-attachment: fixed;
+    color: $text-color !important;
+    font-family: 'Roboto Serif', serif;
+    letter-spacing: 0.1px;
+    // overflow-x: hidden;
+}
+
+@mixin line-clamp($number){
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}

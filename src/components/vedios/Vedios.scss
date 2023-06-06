@@ -1,0 +1,45 @@
+@import '../../base.scss';
+
+.vedios{
+    margin-bottom: 0.5rem;
+    padding: 0.7rem;
+
+    font-weight: 400;
+    font-size: 15px;
+
+    width: 100%;
+
+    cursor: pointer;
+
+    .vedio_top{
+        margin-bottom: 0.5rem;
+        position: relative;
+        img{
+            width: 100%;
+        }
+        .time{
+            position: absolute;
+            bottom: 0.3rem;
+            right: 1rem;
+           background: #080808ec;
+           padding: 0.2rem 5px;
+           border-radius: 3px;
+        }
+    }
+    .vedio_title{
+        color: #fff;
+        margin-bottom: 0.1rem;
+       
+        @include line-clamp(1)
+    }
+    .vedio_channel{
+        display: flex;
+        gap: 10px;
+        margin-top: 5px;
+        img{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+        }
+    }
+}

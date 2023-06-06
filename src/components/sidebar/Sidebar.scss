@@ -1,0 +1,56 @@
+@import "../../base.scss";
+
+.sidebar {
+  background: $black-secondary;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 0.3rem;
+  transition: transform 0.3s ease-in;
+
+  li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 8px;
+
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background-color: $border-color;
+    }
+    > :nth-child(1) {
+      font-size: 22px;
+    }
+    span {
+      font-size: 14px;
+      letter-spacing: 0.4px;
+      font-weight: 500;
+    }
+  }
+  &.open {
+    transform: translateX(0);
+
+  }
+}
+
+@media (max-width: $breakpoint-medium) {
+  .sidebar {
+    width: 90px;
+    li {
+      justify-content: center;
+      span {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: $breakpoint-small) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 999;
+  }
+}
